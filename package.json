@@ -28,9 +28,13 @@
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-typescript": "^7.24.1",
     "@types/node": "^20.19.25",
+    "@types/prompts": "^2.4.9",
     "tsup": "^8.5.0",
     "tsx": "^4.16.2",
     "typescript": "^5.4.4",
     "vitest": "^2.0.0"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
   }
 }
