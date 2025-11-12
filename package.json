@@ -1,9 +1,23 @@
 {
-  "name": "typescript-vitest-template",
+  "name": "tmux-project-launcher",
   "version": "0.1.0",
-  "description": "TypeScript & vitest template",
-  "main": "src/index.ts",
+  "description": "A CLI for launching projects in tmux",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "test": "vitest",
     "start": "tsx src/index.ts"
   },
@@ -13,6 +27,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-typescript": "^7.24.1",
+    "tsup": "^8.5.0",
     "tsx": "^4.16.2",
     "typescript": "^5.4.4",
     "vitest": "^2.0.0"
