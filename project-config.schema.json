@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProjectConfig",
+  "description": "Configuration schema for tmux project launcher",
+  "type": "object",
+  "required": ["project", "name", "root"],
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "Project identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "root": {
+      "type": "string",
+      "description": "Project root directory path"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional project description"
+    },
+    "settings": {
+      "type": "object",
+      "description": "Optional project-specific settings",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
