@@ -37,7 +37,7 @@ async function main() {
   if (response.config) {
     const command = generateCommand(response.config);
     // run command in terminal
-    execSync(command, { stdio: "inherit", shell: "/bin/bash" });
+    execSync(command, { stdio: "inherit" });
   } else {
     console.log("No project selected.");
   }
