@@ -1,0 +1,20 @@
+{
+  "name": "typescript-vitest-template",
+  "version": "0.1.0",
+  "description": "TypeScript & vitest template",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest",
+    "start": "tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-typescript": "^7.24.1",
+    "tsx": "^4.16.2",
+    "typescript": "^5.4.4",
+    "vitest": "^2.0.0"
+  }
+}
