@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import prompts from "prompts";
+import { execSync } from "child_process";
 import { generateCommand } from "./generateCommand";
 import { readProjectConfig } from "./readProjectConfig";
 import { ProjectConfig } from "./typings";
@@ -35,8 +36,8 @@ async function main() {
 
   if (response.config) {
     const command = generateCommand(response.config);
-    console.log("\nGenerated command:");
-    console.log(command);
+    // run command in terminal
+    execSync(command, { stdio: "inherit", shell: "/bin/bash" });
   } else {
     console.log("No project selected.");
   }
